@@ -1,0 +1,100 @@
+body {
+    background: linear-gradient(90deg, #1d3349, #9065d4, transparent 322%, #1d3349);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#tecnologias {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: white;
+
+    .port-lligat-slab-regular {
+        font-family: "Port Lligat Slab", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    font-size: 3rem;
+    margin-top: 50px;
+}
+
+#about {
+    margin: 10px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #b6b6b613, #9065d4, transparent 322%, #1d3349);
+    color: white;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .port-lligat-slab-regular {
+        font-family: "Port Lligat Slab", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+
+p {
+    color: white;  
+    font-size: 1.5rem;
+    display: flex;
+   justify-content: center;
+
+    .port-lligat-slab-regular {
+        font-family: "Port Lligat Slab", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.social {
+
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+
+    img {
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+
+img {position: relative;
+    top: 1rem;
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
