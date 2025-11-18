@@ -8,12 +8,57 @@ body {
     padding: 20px;
 }
 
-#tecnologias {
-    display: flex;
+#slide {
     justify-content: center;
     gap: 20px;
-    margin: 0 auto;
+    margin: 0.8rem auto;
 }
+
+
+
+/* slide animation: slide the #slide container in from the left */
+#tecnologias {
+    position: relative;
+    transform: translateX(-40px);
+    opacity: 0;
+    -webkit-animation: tecnologias-in 0.6s ease-out 0.2s forwards;
+    animation: tecnologias-in 0.6s ease-out 0.2s forwards;
+    overflow: visible;
+}
+
+/* if you want individual children (like images) to stagger, use this */
+#tecnologias > * {
+    transform: translateX(-20px);
+    opacity: 110;
+    -webkit-animation: tecnologias-child 0.45s ease-out forwards;
+    animation: tecnologias-child 0.45s ease-out forwards;
+}
+#tecnologias > *:nth-child(1) { -webkit-animation-delay: 0.25s; animation-delay: 0.25s; }
+#tecnologias > *:nth-child(2) { -webkit-animation-delay: 0.35s; animation-delay: 0.35s; }
+#tecnologias > *:nth-child(3) { -webkit-animation-delay: 0.45s; animation-delay: 0.45s; }
+
+/* keyframes */
+@-webkit-keyframes tecnologias-in {
+    from { -webkit-transform: translateX(-40px); transform: translateX(-40px); opacity: 0; }
+    to   { -webkit-transform: translateX(0);     transform: translateX(0);     opacity: 1; }
+}
+@keyframes tecnologias-in {
+    from { -webkit-transform: translateX(-40px); transform: translateX(-40px); opacity: 0; }
+    to   { -webkit-transform: translateX(0);     transform: translateX(0);     opacity: 1; }
+}
+
+@-webkit-keyframes tecnologias-child {
+    from { -webkit-transform: translateX(-20px); transform: translateX(-20px); opacity: 0; }
+    to   { -webkit-transform: translateX(0);     transform: translateX(0);     opacity: 1; }
+}
+@keyframes tecnologias-child {
+    from { -webkit-transform: translateX(-20px); transform: translateX(-20px); opacity: 0; }
+    to   { -webkit-transform: translateX(0);     transform: translateX(0);     opacity: 1; }
+}
+
+
+
+
 
 h1 {
     display: flex;
@@ -97,4 +142,120 @@ img {position: relative;
     display: block;
     margin: 0 auto;
     border-radius: 10px;
+}
+
+/* Responsivo para celulares - substitui o placeholder */
+@media (max-width: 900px) {
+    .container {
+        max-width: 720px;
+        padding: 16px;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+        margin-top: 40px;
+    }
+
+    p,
+    a {
+        font-size: 1.25rem;
+    }
+
+    #about {
+        max-width: 420px;
+        padding: 16px;
+        margin: 12px auto;
+    }
+
+    img {
+        width: 240px;
+        top: 0.5rem;
+    }
+
+    .social img {
+        width: 36px;
+        height: 36px;
+        margin: 0 8px;
+    }
+
+    #slide {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p,
+    a {
+        font-size: 1.15rem;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    #about {
+        max-width: 360px;
+        border-radius: 8px;
+    }
+
+    #slide {
+        gap: 12px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* desativa a animação no mobile para evitar que elementos "pulem" */
+    #tecnologias {
+        transform: none;
+        animation: none;
+        -webkit-animation: none;
+        opacity: 1;
+    }
+    #tecnologias > * {
+        transform: none;
+        animation: none;
+        -webkit-animation: none;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 420px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    p,
+    a {
+        font-size: 1rem;
+    }
+
+    img {
+        width: 160px;
+    }
+
+    .social img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .container {
+        padding: 8px;
+    }
+
+    #about {
+        max-width: 320px;
+        padding: 10px;
+    }
+}
+
+     
 }
