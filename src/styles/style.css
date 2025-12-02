@@ -1,261 +1,267 @@
-body {
-    background: linear-gradient(90deg, #1d3349, #9065d4, transparent 322%, #1d3349);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
+
+
+header {
+    background: linear-gradient(90deg, rgb(0, 0, 0, 36), rgb(0, 0, 0, 0), rgb(0, 0, 0, 36));
+    text-align: center;
     padding: 20px;
 }
 
-#slide {
+.cabecalho {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 0 0 10px;
+    padding: 10px 7px;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #36839428;
+    border-radius: 10px;
+}
+
+nav {
+    align-items: center;
+    display: flex;
     justify-content: center;
-    gap: 20px;
-    margin: 0.8rem auto;
 }
 
-
-
-/* slide animation: slide the #slide container in from the left */
-#tecnologias {
-    position: relative;
-    transform: translateX(-40px);
-    opacity: 0;
-    -webkit-animation: tecnologias-in 0.6s ease-out 0.2s forwards;
-    animation: tecnologias-in 0.6s ease-out 0.2s forwards;
-    overflow: visible;
+body {
+    display: block;
+    justify-content: center;
+    background: linear-gradient(to right, #002D37, #004e61a0);
+    background: none-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* if you want individual children (like images) to stagger, use this */
-#tecnologias > * {
-    transform: translateX(-20px);
-    opacity: 110;
-    -webkit-animation: tecnologias-child 0.45s ease-out forwards;
-    animation: tecnologias-child 0.45s ease-out forwards;
-}
-#tecnologias > *:nth-child(1) { -webkit-animation-delay: 0.25s; animation-delay: 0.25s; }
-#tecnologias > *:nth-child(2) { -webkit-animation-delay: 0.35s; animation-delay: 0.35s; }
-#tecnologias > *:nth-child(3) { -webkit-animation-delay: 0.45s; animation-delay: 0.45s; }
+section {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 30rem;
 
-/* keyframes */
-@-webkit-keyframes tecnologias-in {
-    from { -webkit-transform: translateX(-40px); transform: translateX(-40px); opacity: 0; }
-    to   { -webkit-transform: translateX(0);     transform: translateX(0);     opacity: 1; }
-}
-@keyframes tecnologias-in {
-    from { -webkit-transform: translateX(-40px); transform: translateX(-40px); opacity: 0; }
-    to   { -webkit-transform: translateX(0);     transform: translateX(0);     opacity: 1; }
 }
 
-@-webkit-keyframes tecnologias-child {
-    from { -webkit-transform: translateX(-20px); transform: translateX(-20px); opacity: 0; }
-    to   { -webkit-transform: translateX(0);     transform: translateX(0);     opacity: 1; }
-}
-@keyframes tecnologias-child {
-    from { -webkit-transform: translateX(-20px); transform: translateX(-20px); opacity: 0; }
-    to   { -webkit-transform: translateX(0);     transform: translateX(0);     opacity: 1; }
+img {
+    margin: 0 15px;
+    width: 60px;
+    height: 60px;
 }
 
+#favicons {
+    margin-top: 20px;
+    justify-content: center;
+    font-size: 40px;
+
+}
 
 
 
 
 h1 {
+    font-size: 64px;
+    text-transform: uppercase;
+    text-align: center;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(238, 255, 2), rgb(202, 22, 22), rgb(0, 212, 255), rgb(255, 255, 255));
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animante 2.5s linear infinite;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(238, 255, 2), rgb(202, 22, 22), rgb(0, 212, 255), rgb(255, 255, 255));
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animante 2.5s linear infinite;
+}
+
+@keyframes animante {
+    to {
+        background-position: 200%;
+    }
+}
+
+aside {
+    justify-content: center;
+    text-align: center;
+    margin-top: 25rem;
+    margin-bottom: 25rem
+}
+
+.cards-projetos {
     display: flex;
     justify-content: center;
-    color: white;
-
-    .port-lligat-slab-regular {
-        font-family: "Port Lligat Slab", serif;
-        font-weight: 400;
-        font-style: normal;
-    }
-
-    font-size: 3rem;
-    margin-top: 50px;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
-#about {
-    margin: 10px;
-    border-radius: 10px;
-    background: linear-gradient(90deg, #b6b6b613, #9065d4, transparent 322%, #1d3349);
-    color: white;
-    max-width: 450px;
-    margin-left: auto;
-    margin-right: auto;
 
-    .port-lligat-slab-regular {
-        font-family: "Port Lligat Slab", serif;
-        font-weight: 400;
-        font-style: normal;
-    }
+.sobre h2 {
+    align-items: start;
+    margin-right: 20px;
+    font-size: 32px;
+    margin-bottom: 10px;
+    display: block;
 }
 
-p {
-    color: white;  
-    font-size: 1.5rem;
-    display: flex;
-   justify-content: center;
-
-    .port-lligat-slab-regular {
-        font-family: "Port Lligat Slab", serif;
-        font-weight: 400;
-        font-style: normal;
-    }
+.sobre h2:hover {
+    cursor: default;
 }
 
-a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
+.sobre p {
+    margin-right: 40px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    line-height: 1.6rem
+}
+
+.sobre {
+    margin-bottom: 20px;
     margin-top: 20px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
-.social {
+.sobremim {
 
-    justify-content: center;
+    width: 60rem;
+    height: 6;
     display: flex;
     align-items: center;
-    margin-top: 4px;
+    font-size: 20px;
 
     img {
-        width: 40px;
-        height: 40px;
-        margin: 0 10px;
-        transition: transform 0.3s;
+        border-radius: 30px;
+        margin-left: 20px;
+        width: 28rem;
+        height: 36rem;
 
-        &:hover {
+        hover {
             transform: scale(1.1);
+            transition: all 1.3s ease-in-out;
         }
+
     }
 }
 
-
-
-img {position: relative;
-    top: 1rem;
-    width: 300px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
+.redes {
+    margin-top: 20px;
+    justify-content: center;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
 }
 
-/* Responsivo para celulares - substitui o placeholder */
-@media (max-width: 900px) {
-    .container {
-        max-width: 720px;
-        padding: 16px;
+
+.rodape {
+    background: linear-gradient(90deg, rgb(0, 0, 0, 36), rgb(0, 0, 0, 0), rgb(0, 0, 0, 36));
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE (Telas de Celular e Tablet)
+   Aplica essas regras se a tela for menor que 768px
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* 1. Ajusta o container principal para não estourar a tela */
+    .sobremim {
+        width: 90%;
+        /* Ocupa 90% da tela do celular, deixando uma borda */
+        flex-direction: column-reverse;
+        /* Coloca a imagem EM CIMA e o texto EM BAIXO */
+        height: auto;
+        /* Remove a altura fixa para o conteúdo fluir */
+        text-align: center;
+        /* Centraliza o texto */
     }
 
+    /* 2. Ajusta a imagem para caber na tela */
+    .sobremim img {
+        width: 100%;
+        /* A imagem ocupa a largura disponível do container */
+        max-width: 300px;
+        /* Limita o tamanho máximo para não ficar gigante */
+        height: auto;
+        /* Mantém a proporção correta */
+        margin: 0 0 20px 0;
+        /* Tira a margem lateral e põe margem embaixo */
+        border-radius: 50%;
+        /* Opcional: Deixa a foto redondinha no mobile */
+    }
+
+    /* 3. Reduz a margem gigante do topo */
+    section {
+        margin-top: 150px;
+        /* Reduz de 350px para 150px (suficiente para passar o header fixo) */
+    }
+
+    /* 4. Ajusta o tamanho da fonte do título para não quebrar linhas */
     h1 {
-        font-size: 2.25rem;
-        margin-top: 40px;
+        font-size: 36px;
+        /* Reduz de 64px para algo legível no mobile */
     }
 
-    p,
-    a {
-        font-size: 1.25rem;
-    }
-
-    #about {
-        max-width: 420px;
-        padding: 16px;
-        margin: 12px auto;
-    }
-
-    img {
-        width: 240px;
-        top: 0.5rem;
-    }
-
-    .social img {
-        width: 36px;
-        height: 36px;
-        margin: 0 8px;
-    }
-
-    #slide {
-        gap: 16px;
-    }
-}
-
-@media (max-width: 600px) {
-    .container {
-        padding: 12px;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    p,
-    a {
-        font-size: 1.15rem;
-    }
-
-    img {
-        width: 200px;
-    }
-
-    #about {
-        max-width: 360px;
-        border-radius: 8px;
-    }
-
-    #slide {
-        gap: 12px;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* desativa a animação no mobile para evitar que elementos "pulem" */
-    #tecnologias {
-        transform: none;
-        animation: none;
-        -webkit-animation: none;
-        opacity: 1;
-    }
-    #tecnologias > * {
-        transform: none;
-        animation: none;
-        -webkit-animation: none;
-        opacity: 1;
-    }
-}
-
-@media (max-width: 420px) {
-    h1 {
-        font-size: 1.4rem;
-    }
-
-    p,
-    a {
-        font-size: 1rem;
-    }
-
-    img {
-        width: 160px;
-    }
-
-    .social img {
-        width: 28px;
-        height: 28px;
-    }
-
-    .container {
-        padding: 8px;
-    }
-
-    #about {
-        max-width: 320px;
+    /* 5. Ajusta o menu de navegação (opcional, para não ficar apertado) */
+    .cabecalho {
         padding: 10px;
+        /* Menos espaço no header */
+        position: fixed;
+        /* Garante que continua fixo */
+        width: 100%;
     }
-}
 
-     
+    nav a {
+        font-size: 16px;
+        /* Diminui a fonte dos links */
+        margin: 0 5px;
+        /* Diminui o espaço entre os links */
+    }
+
+    /* 6. Ajusta o parágrafo */
+    .sobre p {
+        margin-right: 0;
+        /* Remove a margem direita que empurrava o texto */
+        padding: 0 15px;
+        /* Adiciona um respiro nas laterais */
+        text-align: justify;
+        /* (Opcional) Melhora a leitura em blocos */
+    }
+
+    .sobre h2 {
+        margin-right: 0;
+        text-align: center;
+    }
 }

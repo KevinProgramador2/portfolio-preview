@@ -1,41 +1,106 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/styles/style.css">
-    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Port+Lligat+Slab&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+
+    <title>Portfolio Kevin Rezende</title>
 </head>
 
 <body>
 
-    <div class="container">
-        <img src="src/images/eu-removebg-preview.png" alt="Imagem">
-        <br>
-        <img id="tecnologias" src="https://skillicons.dev/icons?i=js,python,html,css,react,nodejs" alt="Tecnologias"/>
-        <h1>Sobre mim</h1>
+    <header class="cabecalho">
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+    </header>
 
-        <p id="about">Desenvolvedor apaixonado por transformar ideias em código.
-            Sempre em busca de escrever algo melhor do que ontem.
-        <p>Fale comigo!</p>
-
-        <div class="social">
-
-            <a href="https://www.instagram.com/kevinrzk._/">
-                <img src="src/images/criativo-65946738a901dMDIvMDEvMjAyNCAxNmg0Mg==.jpg" alt="instagram Logo">
-                <a href="https://www.linkedin.com/in/kevinrezende/">
-                    <img src="src/images/linkedinImg.png" alt="LinkedIn Logo">
-                    <a href="https://github.com/KevinProgramador2">
-                        <img src="src/images/github-logo-png_seeklogo-304612.png" alt="GitHub Logo">
-
-                    </a> 
+    <section>
+        <div class="aprensentacao">
+            <h1 id="inicio">Olá, eu sou o Kevin!.</h1>
+            <h2>Desenvolvedor Front-end</h2>
         </div>
+        <div id="favicons">
+            <img src="src/images/html.png" alt="tecnologias">
+            <img src="src/images/javascript-logo-javascript-icon-transparent-free.png" alt="tecnologias">
+            <img src="src/images/nodejs_logo_icon_169910.png" alt="tecnologias">
+            <img src="src/images/react.png" alt="tecnologias">
+            <img src="src/images/css.png" alt="tecnologias">
+        </div>
+    </section>
+
+    <aside class="projetos">
+        <h2 id="projetos">Projetos Recentes</h2>
+        <div class="cards-projetos">
+            <div class="card">
+                <img src="src/images/projeto1.png" alt="Projeto 1">
+                <h3>Projeto 1</h3>
+                <p>Descrição breve do projeto 1.</p>
+            </div>
+            <div class="card2">
+                <img src="src/images/projeto2.png" alt="Projeto 2">
+                <h3>Projeto 2</h3>
+                <p>Descrição breve do projeto 2.</p>
+            </div>
+            <div class="card3">
+                <img src="src/images/projeto3.png" alt="Projeto 3">
+                <h3>Projeto 3</h3>
+                <p>Descrição breve do projeto 3.</p>
+            </div>
+        </div>
+
+    </aside>
+
+    <div class="sobre">
+        <h2 id="sobre">Sobre Mim</h2>
+        <div class="sobremim">
+            <p>Olá, eu sou o Kevin! 💻 Desenvolvedor Web | <br> <br>
+
+                Apaixonado por tecnologia.Sou um profissional em constante aprendizado. Tenho como principal objetivo
+                evoluir dentro da área de tecnologia, buscando não apenas dominar as linguagens e frameworks modernos,
+                mas
+                também compreender profundamente como criar soluções que gerem impacto real.
+                <br> <br>
+                Minha mentalidade é de crescimento contínuo — acredito que cada linha de código é uma oportunidade de
+                aprender algo novo.
+                <br> <br>
+                Valorizo boas práticas, colaboração em equipe e a construção de projetos que unam criatividade,
+                funcionalidade e desempenho.Estou em busca de uma oportunidade que me permita desenvolver, aprender e
+                crescer como profissional dentro do universo do desenvolvimento web, contribuindo com dedicação,
+                curiosidade
+                e vontade de fazer a diferença.
+            </p>
+            <div class="minhaimagem">
+                <img src="src/images/eu3.jpg" alt="foto pessoal">
+            </div>
+        </div>
+
+
+
     </div>
 
-    <footer>
-        <p>© 2025 Kevin Rezende. Todos os direitos reservados.</p>
-    </footer>
+    <div class="contato">
+
+        <div class="redes">
+            <a href="https://www.linkedin.com/in/kevinrezende" target="_blank">
+                <img src="src/images/linkedinImg.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/Kevinprogramador2" target="_blank">
+                <img src="src/images/github-logo-png_seeklogo-304612.png" alt="GitHub">
+        </div>
+
+        <footer class="rodape">
+            <p>&copy; 2025 Kevin Rezende. Todos os direitos reservados.</p>
+        </footer>
 </body>
 
 </html>
