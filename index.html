@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Port+Lligat+Slab&family=Press+Start+2P&display=swap"
         rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <title>Portfolio Kevin Rezende</title>
 </head>
 
@@ -18,6 +18,7 @@
 
     <header class="cabecalho">
         <nav>
+            <a href="currículo_Kevin_dev.pdf" target="_blank">Vizualizar CV</a>
             <a href="#inicio">Inicio</a>
             <a href="#projetos">Projetos</a>
             <a href="#sobre">Sobre</a>
@@ -29,36 +30,28 @@
             <h1 id="inicio">Olá, eu sou o Kevin!.</h1>
             <h2>Desenvolvedor Front-end</h2>
         </div>
-        <div id="favicons">
-            <img src="src/images/html.png" alt="tecnologias">
-            <img src="src/images/javascript-logo-javascript-icon-transparent-free.png" alt="tecnologias">
-            <img src="src/images/nodejs_logo_icon_169910.png" alt="tecnologias">
-            <img src="src/images/react.png" alt="tecnologias">
-            <img src="src/images/css.png" alt="tecnologias">
+        <div class="favicons">
+            <div class="item"></div> <img src="src/images/html.png" alt="tecnologias">
+            <div class="item"></div><img src="src/images/javascript-logo-javascript-icon-transparent-free.png"
+                alt="tecnologias">
+            <div class="item"></div><img src="src/images/nodejs_logo_icon_169910.png" alt="tecnologias">
+            <div class="item"></div><img src="src/images/react.png" alt="tecnologias">
+            <div class="item"></div><img src="src/images/css.png" alt="tecnologias">
         </div>
     </section>
 
     <aside class="projetos">
-        <h2 id="projetos">Projetos Recentes</h2>
+        <h2 id="#projetos">Projetos Recentes</h2>
         <div class="cards-projetos">
             <div class="card">
-                <img src="src/images/Screenshot 2025-12-03 164458.png" alt="Projeto 1">
+                <img src="src/images/Desktop 2025.12.08 - 11.43.56.01.gif" alt="Projeto 1">
                 <h3>Portal Vagas Freelancer</h3>
-               <a href="https://github.com/KevinProgramador2/PortalVagas" target="_blank" rel="noopener noreferrer">Repositorio Github</a> <br>
+                <p><strong>Acesse o reposito e o deploy do projeto abaixo</strong></p>
+                <a href="https://github.com/KevinProgramador2/PortalVagas" target="_blank"
+                    rel="noopener noreferrer">Repositorio Github</a> <br>
                 <a href="https://juandasilvaa.github.io/portal-de-vagas/" target="_blank">Deploy do projeto</a>
             </div>
-            <!-- <div class="card">
-                <img src="src/images/projeto2.png" alt="Projeto 2">
-                <h3>Projeto 2</h3>
-                <p>Descrição breve do projeto 2.</p>
-            </div>
-            <div class="card">
-                <img src="src/images/projeto3.png" alt="Projeto 3">
-                <h3>Projeto 3</h3>
-                <p>Descrição breve do projeto 3.</p>
-            </div> -->
         </div>
-
     </aside>
 
     <div class="sobre">
@@ -104,9 +97,13 @@
     </div>
 
 
+    <footer>
+        <p>2025&copy; Kevin Rezende Todos os direitos reservados</p>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js'></script>
 </body>
-<footer>
-    <p>2025&copy; Kevin Rezende Todos os direitos reservados</p>
-</footer>
 
 </html>
