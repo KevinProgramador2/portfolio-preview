@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #0a0a0a, #1a1a2e);
+  color: #e0e0e0;
+}
+
+header {
+  background: linear-gradient(90deg, #1a1a2e, #0f0f1e);
+  text-align: center;
+  padding: 30px;
+}
+
+.cabecalho {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px 20px;
+  font-size: 32px;
+  font-weight: bold;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== NAV ===== */
+nav ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  justify-content: center;
+
+  flex-wrap: wrap;
+}
+
+/* ===== HEADER RESPONSIVO ===== */
+@media (max-width: 480px) {
+  .cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    padding: 12px;
+  }
+
+  nav ul {
+    gap: 6px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+}
+
+nav a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 20px;
+
+  padding: 8px 12px;
+
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+/* ===== APRESENTAÇÃO ===== */
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  margin-top: 15rem;
+}
+
+.apresentacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== TIPOGRAFIA ===== */
+h1 {
+  font-size: 64px;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+/* ===== ICONS ===== */
+.faviImg {
+  width: 48px;
+  height: 48px;
+}
+
+.favicons:hover > :not(:hover) {
+  opacity: 0.5;
+  transform: scale(0.95);
+}
+
+/* ===== PROJETOS ===== */
+.projetos {
+  margin: 8rem auto;
+
+  max-width: 1000px;
+
+  background: rgba(30, 30, 50, 0.6);
+  border-radius: 20px;
+  padding: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.cards-projetos {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.card a {
+  flex-wrap: nowrap;
+  margin: 2px;
+  text-decoration: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(30, 30, 50, 0.782);
+  border-radius: 15px;
+  padding: 20px;
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* ===== SOBRE ===== */
+
+/* TÍTULO */
+.subtitulo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sobremim {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 40px;
+
+  max-width: 1100px;
+  margin: 0 auto;
+
+  padding: 0 20px;
+}
+
+/* TEXTO */
+.sobremim p {
+  max-width: 600px;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* IMAGEM */
+.minhaimagem img {
+  width: 100%;
+  max-width: 350px;
+  height: 22rem;
+
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* ===== REDES ===== */
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.redes img {
+  width: 40px;
+  transition: 0.3s;
+}
+
+.redes img:hover {
+  transform: scale(1.2);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+}
+
+/* =========================================
+   📱 RESPONSIVIDADE
+========================================= */
+@media (max-width: 768px) {
+  section {
+    margin-top: 10rem;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .sobremim {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* ===== TEXTO SOBRE (MELHORADO) ===== */
+  .sobremim p {
+    max-width: 600px;
+    line-height: 1.8;
+
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .minhaimagem img {
+    max-width: 250px;
+  }
+}
