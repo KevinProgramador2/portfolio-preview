@@ -2,7 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Montserrat, sans-serif;
+}
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
@@ -11,9 +15,12 @@ body {
 }
 
 header {
+  display: flex;
+  justify-content: center;
   background: linear-gradient(90deg, #1a1a2e, #0f0f1e);
+
   text-align: center;
-  padding: 30px;
+  padding: 1rem;
 }
 
 .cabecalho {
@@ -39,7 +46,7 @@ nav ul {
   gap: 10px;
   list-style: none;
   justify-content: center;
-
+  margin: 10px;
   flex-wrap: wrap;
 }
 
@@ -116,11 +123,23 @@ h2 {
 .faviImg {
   width: 48px;
   height: 48px;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.faviImg:hover {
+  transform: scale(1.1);
 }
 
 .favicons:hover > :not(:hover) {
-  opacity: 0.5;
-  transform: scale(0.95);
+  opacity: 0.4;
+  transform: scale(0.9);
+  filter: blur(1px);
+}
+
+.faviImg:hover {
+  animation: tecAnimate 0.3s ease forwards;
 }
 
 /* ===== PROJETOS ===== */
@@ -176,6 +195,7 @@ h2 {
 
 /* TÍTULO */
 .subtitulo {
+  font-size: 2.4rem;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -198,6 +218,35 @@ h2 {
   max-width: 600px;
   line-height: 1.8;
   font-size: 1.1rem;
+}
+
+/* Responsividade da .minhaimagem */
+
+@media (max-width: 1452px) {
+  .sobremim img,
+  .minhaimagem img {
+    max-height: auto;
+    width: auto;
+  }
+}
+
+@media (max-width: 1026px) {
+  .sobremim,
+  .minhaimagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1152px) {
+  .sobremim,
+  p,
+  .subtitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* IMAGEM */
@@ -250,8 +299,9 @@ footer {
     font-size: 14px;
   }
 
-  .sobremim {
-    flex-direction: column;
+  .sobremim,
+  .subtitulo {
+    display: flex;
     text-align: center;
   }
 
