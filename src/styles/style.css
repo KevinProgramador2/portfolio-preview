@@ -12,11 +12,13 @@
 body {
   background: linear-gradient(180deg, #0a0a0a, #1a1a2e);
   color: #e0e0e0;
+  overflow-x: hidden;
 }
 
 header {
   display: flex;
   justify-content: center;
+  width: 100%;
   background: linear-gradient(90deg, #1a1a2e, #0f0f1e);
 
   text-align: center;
@@ -27,6 +29,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  box-sizing: border-box;
   z-index: 1;
 
   display: flex;
@@ -52,20 +55,20 @@ nav ul {
 /* ===== HEADER RESPONSIVO ===== */
 @media (max-width: 480px) {
   .cabecalho {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    padding: 8px;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
   }
 
   nav ul {
-    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
   }
 
   nav a {
-    font-size: 14px;
-    padding: 6px 8px;
+    font-size: 13px;
+    padding: 5px 6px;
   }
 }
 
@@ -129,6 +132,24 @@ h2 {
 
 .faviImg:hover {
   transform: scale(1.1);
+}
+
+.favicons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap; /* 🔥 impede quebra */
+}
+
+@media (max-width: 427px) {
+  .favicons {
+    gap: 6px;
+  }
+
+  .faviImg {
+    width: clamp(28px, 6vw, 48px);
+    height: clamp(28px, 6vw, 48px);
+  }
 }
 
 .favicons:hover > :not(:hover) {
